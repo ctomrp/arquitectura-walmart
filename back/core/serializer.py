@@ -30,4 +30,9 @@ class TipoProductoSerializer(serializers.ModelSerializer):
     class Meta:
         model = TipoProducto
         fields = '__all__'
+
+class ReporteSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Reporte
+        fields = '__all__'
         

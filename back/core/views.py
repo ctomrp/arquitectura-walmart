@@ -26,3 +26,7 @@ class TipoProductoView(viewsets.ModelViewSet):
 class CompraProductoView(viewsets.ModelViewSet):
     serializer_class = CompraProductoSerializer
     queryset = CompraProducto.objects.all() 
+
+class ReporteView(viewsets.ModelViewSet):
+    serializer_class = ReporteSerializer
+    queryset = Reporte.objects.all()

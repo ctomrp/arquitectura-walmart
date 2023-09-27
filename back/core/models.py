@@ -41,3 +41,14 @@ class CompraProducto(models.Model):
 
     def __str__(self):
         return f"Compra #{self.compra.id} n/ Producto: {self.producto.nombre}"
+    
+class Reporte(models.Model):
+    fecha_reporte = models.DateField()
+    compra = models.DateTimeField()
+    producto = models.CharField(max_length=50)
+    grupo_producto = models.CharField(max_length=10)
+    cantidad_comprada = models.IntegerField()
+    sucursal = models.CharField(max_length=40)
+
+    def __str__(self):
+        return self.fecha_reporte

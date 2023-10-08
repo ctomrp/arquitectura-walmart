@@ -1,0 +1,355 @@
+[
+    {
+      "fecha_compra": "2023-01-01T10:30:00",
+      "sucursal_ID": 27,
+      "productos": [
+        {
+          "nombre": "Papas fritas",
+          "precio": 2000,
+          "descripcion": "Papas fritas",
+          "tipo": "Snack",
+          "grupo": null,
+          "cantidad": 2
+        },
+        {
+          "nombre": "Sprite zero",
+          "precio": 890,
+          "descripcion": "Gaseosa individual",
+          "tipo": "Gaseosa individual",
+          "grupo": "b",
+          "cantidad": 1
+        }
+      ]
+    },
+    {
+      "fecha_compra": "2023-01-02T14:15:00",
+      "sucursal_ID": 31,
+      "productos": [
+        {
+          "nombre": "Bigtime",
+          "precio": 950,
+          "descripcion": "Chicle",
+          "tipo": "Chicle",
+          "grupo": "a",
+          "cantidad": 2
+        },
+        {
+          "nombre": "Pan",
+          "precio": 20,
+          "descripcion": "Pan",
+          "tipo": "Pan",
+          "grupo": null,
+          "cantidad": 1
+        }
+      ]
+    },
+    {
+      "fecha_compra": "2023-01-03T16:45:00",
+      "sucursal_ID": 27,
+      "productos": [
+        {
+          "nombre": "Chicle Trident",
+          "precio": 500,
+          "descripcion": "Chicle de menta",
+          "tipo": "Chicle",
+          "grupo": "a",
+          "cantidad": 3
+        },
+        {
+          "nombre": "Coca-Cola 500ml",
+          "precio": 800,
+          "descripcion": "Gaseosa individual",
+          "tipo": "Gaseosa individual",
+          "grupo": "b",
+          "cantidad": 2
+        }
+      ]
+    },
+    {
+      "fecha_compra": "2023-01-04T12:00:00",
+      "sucursal_ID": 31,
+      "productos": [
+        {
+          "nombre": "Chocolate Milka",
+          "precio": 1200,
+          "descripcion": "Chocolate con leche",
+          "tipo": "Chocolate",
+          "grupo": "c",
+          "cantidad": 1
+        },
+        {
+          "nombre": "Papel Higiénico",
+          "precio": 800,
+          "descripcion": "Rollo de papel higiénico",
+          "tipo": "Higiene",
+          "grupo": "b",
+          "cantidad": 3
+        }
+      ]
+    },
+    {
+      "fecha_compra": "2023-01-05T15:30:00",
+      "sucursal_ID": 27,
+      "productos": [
+        {
+          "nombre": "Leche desnatada 1L",
+          "precio": 1200,
+          "descripcion": "Leche desnatada",
+          "tipo": "Leche",
+          "grupo": null,
+          "cantidad": 3
+        },
+        {
+          "nombre": "Maní Salado",
+          "precio": 800,
+          "descripcion": "Maní salado",
+          "tipo": "Snack",
+          "grupo": "d",
+          "cantidad": 2
+        }
+      ]
+    },
+    {
+      "fecha_compra": "2023-01-06T17:00:00",
+      "sucursal_ID": 31,
+      "productos": [
+        {
+          "nombre": "Chocolate Toblerone",
+          "precio": 1500,
+          "descripcion": "Chocolate suizo",
+          "tipo": "Chocolate",
+          "grupo": "c",
+          "cantidad": 2
+        },
+        {
+          "nombre": "Carne de Res kg",
+          "precio": 6000,
+          "descripcion": "Carne de res fresca",
+          "tipo": "Carne",
+          "grupo": null,
+          "cantidad": 3
+        }
+      ]
+    },
+    {
+      "fecha_compra": "2023-01-07T11:45:00",
+      "sucursal_ID": 27,
+      "productos": [
+        {
+          "nombre": "Agua mineral 1.5L",
+          "precio": 700,
+          "descripcion": "Agua mineral sin gas",
+          "tipo": "Bebida",
+          "grupo": "c",
+          "cantidad": 2
+        },
+        {
+          "nombre": "Queso Gouda 200g",
+          "precio": 1500,
+          "descripcion": "Queso Gouda",
+          "tipo": "Queso",
+          "grupo": null,
+          "cantidad": 1
+        }
+      ]
+    },
+    {
+      "fecha_compra": "2023-01-08T16:30:00",
+      "sucursal_ID": 31,
+      "productos": [
+        {
+          "nombre": "Tomates kg",
+          "precio": 1200,
+          "descripcion": "Tomates frescos",
+          "tipo": "Verduras",
+          "grupo": null,
+          "cantidad": 2
+        },
+        {
+          "nombre": "Aceitunas en conserva",
+          "precio": 1000,
+          "descripcion": "Aceitunas verdes en conserva",
+          "tipo": "Conserva",
+          "grupo": "d",
+          "cantidad": 2
+        }
+      ]
+    },
+    {
+      "fecha_compra": "2023-01-09T09:00:00",
+      "sucursal_ID": 27,
+      "productos": [
+        {
+          "nombre": "Yogur Natural 150g",
+          "precio": 300,
+          "descripcion": "Yogur natural sin azúcar",
+          "tipo": "Yogur",
+          "grupo": null,
+          "cantidad": 4
+        },
+        {
+          "nombre": "Aceite de Oliva 500ml",
+          "precio": 2500,
+          "descripcion": "Aceite de oliva extra virgen",
+          "tipo": "Aceite",
+          "grupo": null,
+          "cantidad": 1
+        }
+      ]
+    },
+    {
+      "fecha_compra": "2023-01-10T13:45:00",
+      "sucursal_ID": 31,
+      "productos": [
+        {
+          "nombre": "Arroz 1kg",
+          "precio": 1200,
+          "descripcion": "Arroz blanco",
+          "tipo": "Arroz",
+          "grupo": null,
+          "cantidad": 2
+        },
+        {
+          "nombre": "Manzanas kg",
+          "precio": 800,
+          "descripcion": "Manzanas frescas",
+          "tipo": "Frutas",
+          "grupo": null,
+          "cantidad": 3
+        }
+      ]
+    },
+    {
+      "fecha_compra": "2023-01-11T18:30:00",
+      "sucursal_ID": 27,
+      "productos": [
+        {
+          "nombre": "Queso Cottage",
+          "precio": 1200,
+          "descripcion": "Queso Cottage bajo en grasa",
+          "tipo": "Queso",
+          "grupo": null,
+          "cantidad": 2
+        },
+        {
+          "nombre": "Cerveza 6-pack",
+          "precio": 2500,
+          "descripcion": "Cerveza en pack de 6 unidades",
+          "tipo": "Cerveza",
+          "grupo": "b",
+          "cantidad": 1
+        }
+      ]
+    },
+    {
+      "fecha_compra": "2023-01-12T10:00:00",
+      "sucursal_ID": 31,
+      "productos": [
+        {
+          "nombre": "Pescado Fresco kg",
+          "precio": 3500,
+          "descripcion": "Pescado fresco",
+          "tipo": "Pescado",
+          "grupo": null,
+          "cantidad": 2
+        },
+        {
+          "nombre": "Hamburguesas 4 unidades",
+          "precio": 1800,
+          "descripcion": "Hamburguesas de carne",
+          "tipo": "Carne",
+          "grupo": "d",
+          "cantidad": 1
+        }
+      ]
+    },
+    {
+      "fecha_compra": "2023-01-13T14:15:00",
+      "sucursal_ID": 27,
+      "productos": [
+        {
+          "nombre": "Pasta Espagueti 500g",
+          "precio": 900,
+          "descripcion": "Pasta de espagueti",
+          "tipo": "Pasta",
+          "grupo": null,
+          "cantidad": 3
+        },
+        {
+          "nombre": "Mantequilla 200g",
+          "precio": 600,
+          "descripcion": "Mantequilla",
+          "tipo": "Lácteos",
+          "grupo": null,
+          "cantidad": 2
+        }
+      ]
+    },
+    {
+      "fecha_compra": "2023-01-14T09:30:00",
+      "sucursal_ID": 31,
+      "productos": [
+        {
+          "nombre": "Naranjas kg",
+          "precio": 1000,
+          "descripcion": "Naranjas frescas",
+          "tipo": "Frutas",
+          "grupo": null,
+          "cantidad": 2
+        },
+        {
+          "nombre": "Yogur de Fresa 150g",
+          "precio": 350,
+          "descripcion": "Yogur de fresa",
+          "tipo": "Yogur",
+          "grupo": null,
+          "cantidad": 4
+        }
+      ]
+    },
+    {
+      "fecha_compra": "2023-01-15T10:30:00",
+      "sucursal_ID": 27,
+      "productos": [
+        {
+          "nombre": "Papas fritas",
+          "precio": 2000,
+          "descripcion": "Papas fritas",
+          "tipo": "Snack",
+          "grupo": null,
+          "cantidad": 2
+        },
+        {
+          "nombre": "Sprite zero",
+          "precio": 890,
+          "descripcion": "Gaseosa individual",
+          "tipo": "Gaseosa individual",
+          "grupo": "b",
+          "cantidad": 1
+        }
+      ]
+    },
+    {
+      "fecha_compra": "2023-01-16T14:15:00",
+      "sucursal_ID": 31,
+      "productos": [
+        {
+          "nombre": "Bigtime",
+          "precio": 950,
+          "descripcion": "Chicle",
+          "tipo": "Chicle",
+          "grupo": "a",
+          "cantidad": 2
+        },
+        {
+          "nombre": "Pan",
+          "precio": 20,
+          "descripcion": "Pan",
+          "tipo": "Pan",
+          "grupo": null,
+          "cantidad": 1
+        }
+      ]
+    }
+  ]
+  

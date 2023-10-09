@@ -14,5 +14,6 @@ router.register(r'Reporte',views.ReporteView,'Reporte')
 
 urlpatterns = [
     path("",include(router.urls)),
-    path("docs/", include_docs_urls(title="API Docs"))
+    path("docs/", include_docs_urls(title="API Docs")),
+        path('crear_reporte_desde_json/', views.CrearReporteDesdeJSON.as_view(), name='crear-reporte-desde-json'),
 ]

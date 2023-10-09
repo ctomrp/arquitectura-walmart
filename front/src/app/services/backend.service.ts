@@ -14,5 +14,8 @@ getReporte(): Observable<Reporte[]>{
   return this.http.get<Reporte[]>(this.url)
 }
 
+postReport(): Observable<Reporte>{
+  return this.http.post<Reporte>('http://127.0.0.1:8000/crear_reporte_desde_json/', Observable);
+}
 
 }

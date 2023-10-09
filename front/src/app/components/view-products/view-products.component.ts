@@ -12,7 +12,12 @@ export class ViewProductsComponent {
   getReporteApi(){
     this.backendService.getReporte().subscribe(data=>{
       this.reporte = data
-      console.log('ajam')
+    })
+  }
+
+  postReport(){
+    this.backendService.postReport().subscribe(data=>{
+      this.reporte = data
     })
   }
 }

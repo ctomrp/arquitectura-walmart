@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Test</title>
+</head>
+<body>
+    <!--navbar-->
+    <nav class="navbar navbar-expand lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">Frontend</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navba-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link active" aria-current="page" routerLink="/">Home</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+   <!--cont--> 
+   <div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="text-center">Ver Reporte</h1>
+            <button class="btn btn-primary" (click)="getReporteApi()">Generar Reporte</button>
+
+            <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Fecha Reporte</th>
+                    <th scope="col">Fecha Compra</th>
+                    <th scope="col">Producto</th>
+                    <th scope="col">Grupo Producto</th>
+                    <th scope="col">Cantidad Comprada</th>
+                    <th scope="col">Sucursal</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let reporte of reporte">
+                    <th scope="row">{{ reporte.id }}</th>
+                    <td>{{reporte.fecha_reporte}}</td>
+                    <td>{{reporte.compra}}</td>
+                    <td>{{reporte.producto}}</td>
+                    <td>{{reporte.grupo_producto}}</td>
+                    <td>{{reporte.cant_comprada}}</td>
+                    <td>{{reporte.sucursal}}</td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+    </div>
+   </div>
+</body>
+</html>

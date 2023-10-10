@@ -27,8 +27,9 @@
             <h1 class="text-center">Ver Reporte</h1>
             <button class="btn btn-primary" (click)="getReporteApi()">Visualizar Reporte</button>
             <button class="btn btn-secondary" (click)="postReport()">Generar Reporte</button>
-
-            <table class="table table-striped">
+            <button class="btn btn-dark" (click)="descargarPDF()">Descargar Reporte</button>
+            <div id="htmlData">
+              <table class="table table-striped">
                 <thead>
                   <tr>
                     <th scope="col">Id</th>
@@ -52,6 +53,7 @@
                   </tr>
                 </tbody>
               </table>
+            </div>
         </div>
     </div>
    </div>

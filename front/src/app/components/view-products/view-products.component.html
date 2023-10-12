@@ -7,9 +7,10 @@
 </head>
 <body>
     <!--navbar-->
-    <nav class="navbar navbar-expand lg navbar-light bg-light">
+    <div class="navbar">
+      <nav class="navbar navbar-expand lg navbar-light bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="/">Frontend</a>
+            <a class="navbar-brand" href="/"><img src="https://logohistory.net/wp-content/uploads/2023/06/Walmart-Logo.png" alt="" width="70px" height="45px"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -20,14 +21,19 @@
             </div>
         </div>
     </nav>
+    </div>
    <!--cont--> 
    <div class="container">
     <div class="row">
         <div class="col-md-12">
             <h1 class="text-center">Ver Reporte</h1>
-            <button class="btn btn-primary" (click)="getReporteApi()">Visualizar Reporte</button>
-            <button class="btn btn-secondary" (click)="postReport()">Generar Reporte</button>
-            <button class="btn btn-dark" (click)="descargarPDF()">Descargar Reporte</button>
+            <div><button class="btn btn-primary" (click)="getReporteApi()">Visualizar Reporte</button></div>
+            <br>
+            <div><button class="btn btn-secondary" (click)="postReport()">Generar Reporte</button></div>
+            <br>
+            <div><button class="btn btn-dark" (click)="descargarPDF()">Descargar Reporte</button></div>
+            <br>
+            <div><button href="ComponentsComponent">otra pestaña </button></div>
             <div id="htmlData">
               <table class="table table-striped">
                 <thead>

@@ -42,7 +42,7 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr *ngFor="let reporte of reporte">
+                  <tr *ngFor="let reporte of paginatedReporte">
                     <th scope="row">{{ reporte.id }}</th>
                     <td>{{reporte.fecha_reporte}}</td>
                     <td>{{reporte.compra}}</td>
@@ -53,6 +53,16 @@
                   </tr>
                 </tbody>
               </table>
+
+              <!-- Paginación -->
+              <ul class="pagination">
+                <li class="page-item" [class.disabled]="currentPage === 1">
+                  <a class="page-link" (click)="currentPage = currentPage - 1" href="#">Anterior</a>
+                </li>
+                <li class="page-item" [class.disabled]="currentPage === totalPages">
+                  <a class="page-link" (click)="currentPage = currentPage + 1" href="#">Siguiente</a>
+                </li>
+              </ul>
             </div>
         </div>
     </div>

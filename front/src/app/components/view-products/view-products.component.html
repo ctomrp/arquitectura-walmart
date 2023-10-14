@@ -10,13 +10,14 @@
     <div class="navbar">
       <nav class="navbar navbar-expand lg navbar-light bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="/"><img src="https://logohistory.net/wp-content/uploads/2023/06/Walmart-Logo.png" alt="" width="70px" height="45px"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <a class="navbar-brand" href="/"><img src="https://logohistory.net/wp-content/uploads/2023/06/Walmart-Logo.png" alt="" width="70px" height="45px"></a>
+          
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navba-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-link active" aria-current="page" routerLink="/">Home</a>
+                    <a class="nav-link active" aria-current="page" routerLink="components.conponent">Home</a>
                 </div>
             </div>
         </div>
@@ -26,15 +27,17 @@
    <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <h1 class="text-center">Ver Reporte</h1>
+            <h1 class="text-center">Sistema de monitorización de gondolas</h1>
             <div><button class="btn btn-primary" (click)="getReporteApi()">Visualizar Reporte</button></div>
             <br>
             <div><button class="btn btn-secondary" (click)="postReport()">Generar Reporte</button></div>
             <br>
             <div><button class="btn btn-dark" (click)="descargarPDF()">Descargar Reporte</button></div>
             <br>
-            <div><button href="ComponentsComponent">otra pestaña </button></div>
-            <div id="htmlData">
+            <div>
+              <a routerLink="/components" class="btn btn-primary">otra pestaña</a>
+            </div>
+                        <div id="htmlData">
               <table class="table table-striped">
                 <thead>
                   <tr>
@@ -73,5 +76,6 @@
         </div>
     </div>
    </div>
+   
 </body>
 </html>

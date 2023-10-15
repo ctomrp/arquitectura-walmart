@@ -28,15 +28,15 @@
     <div class="row">
         <div class="col-md-12">
             <h1 class="text-center">Sistema de monitorización de gondolas</h1>
-            <div><button class="btn btn-primary" (click)="getReporteApi()">Visualizar Reporte</button></div>
-            <br>
-            <div><button class="btn btn-secondary" (click)="postReport()">Generar Reporte</button></div>
-            <br>
-            <div><button class="btn btn-dark" (click)="descargarPDF()">Descargar Reporte</button></div>
-            <br>
-            <div>
-              <a routerLink="/components" class="btn btn-primary">otra pestaña</a>
-            </div>
+            <button class="btn btn-primary" (click)="getReporteApi()">Visualizar Reporte</button>
+            
+            <button class="btn btn-secondary" (click)="postReport()">Generar Reporte</button>
+            
+            <button class="btn btn-dark" (click)="descargarPDF()">Descargar Reporte</button>
+            
+            
+            <a routerLink="/components" class="btn btn-primary">Siguiente</a>
+            
                         <div id="htmlData">
               <table class="table table-striped">
                 <thead>

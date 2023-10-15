@@ -7,37 +7,33 @@
 </head>
 <body>
     <!--navbar-->
-    <div class="navbar">
-      <nav class="navbar navbar-expand lg navbar-light bg-light">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="/"><img src="https://logohistory.net/wp-content/uploads/2023/06/Walmart-Logo.png" alt="" width="70px" height="45px"></a>
-          
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navba-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <a class="nav-link active" aria-current="page" routerLink="components.conponent">Home</a>
-                </div>
-            </div>
+    <nav class="navbar  bg-primary navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" routerLink="components.conponent"><img src="https://logohistory.net/wp-content/uploads/2023/06/Walmart-Logo.png" alt="" width="70px" height="45px"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link active" aria-current="page" routerLink="components.conponent">Visualizar Reporte </a>
+            <a class="nav-link" routerLink="/GenerarReporte">Generar Reporte</a>
+            <a class="nav-link" href="http://127.0.0.1:8000/admin/login/?next=/admin/">Django Admin</a>
+          </div>
         </div>
-    </nav>
-    </div>
+      </div>
+    </nav> 
    <!--cont--> 
    <div class="container">
     <div class="row">
         <div class="col-md-12">
             <h1 class="text-center">Sistema de monitorización de gondolas</h1>
-            <button class="btn btn-primary" (click)="getReporteApi()">Visualizar Reporte</button>
-            
-            <button class="btn btn-secondary" (click)="postReport()">Generar Reporte</button>
-            
-            <button class="btn btn-dark" (click)="descargarPDF()">Descargar Reporte</button>
-            
-            
-            <a routerLink="/components" class="btn btn-primary">Siguiente</a>
-            
-                        <div id="htmlData">
+          <br>
+          <p class="d-inline-flex gap-1 ">
+            <button type="button" class="btn btn-primary" (click)="getReporteApi()">Visualizar Reporte</button>
+            <button type="button" class="btn btn-primary"(click)="descargarPDF()">Descargar Reporte</button>
+          </p>
+          <br>
+            <div id="htmlData">
               <table class="table table-striped">
                 <thead>
                   <tr>

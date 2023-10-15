@@ -4,9 +4,9 @@ import { ViewProductsComponent } from './components/view-products/view-products.
 import { ComponentsComponent } from './visualizarReporte/components/components.component';
 
 const routes: Routes = [
-  {path: 'VisualizarReporte', component: ViewProductsComponent },
-  {path: 'GenerarReporte', component: ComponentsComponent },
-  { path: '', redirectTo: '/', pathMatch: 'full' } 
+  {path: 'visualiza-reporte', component: ViewProductsComponent },
+  {path: 'generar-reporte', component: ComponentsComponent },
+  { path: '', redirectTo: 'generar-reporte', pathMatch: 'full' } 
 ];
 
 @NgModule({

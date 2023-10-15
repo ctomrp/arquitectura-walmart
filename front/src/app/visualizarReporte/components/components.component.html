@@ -4,33 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Frontend Test</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
 </head>
 <body>
     <!--navbar-->
-    <div class="navbar">
-      <nav class="navbar navbar-expand lg navbar-light bg-light">
+    <nav class="navbar  bg-primary navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-            <a class="navbar-brand" href="/"><img src="https://logohistory.net/wp-content/uploads/2023/06/Walmart-Logo.png" alt="" width="70px" height="45px"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navba-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <a class="nav-link active" aria-current="page" routerLink="components.conponent">Home</a>
-                </div>
+          <a class="navbar-brand" routerLink="components.conponent"><img src="https://logohistory.net/wp-content/uploads/2023/06/Walmart-Logo.png" alt="" width="70px" height="45px"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link active" aria-current="page" routerLink="/VisualizarReporte">Visualizar Reporte </a>
+              <a class="nav-link" routerLink="/GenerarReporte">Generar Reporte</a>
+              <a class="nav-link" href="http://127.0.0.1:8000/admin/login/?next=/admin/">Django Admin</a>
             </div>
+          </div>
         </div>
-    </nav>
-    </div>
+      </nav> 
+    <!--content-->  
     <br><br>
     <h1 class="text-center">Sistema de monitorización de gondolas</h1>
     <div class="container">
-        <button class="btn btn-secondary">Generar reporte</button>
-        <br><br>
-        <button class="btn btn-dark">Descargar reporte</button>
-          
+        <button (click)="postReport()" class="btn btn-primary">Generar reporte</button>
     </div>
-
-    */falta importar las funciones a los botones /*
+</body>   

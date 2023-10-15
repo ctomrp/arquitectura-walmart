@@ -4,8 +4,8 @@ import { ViewProductsComponent } from './components/view-products/view-products.
 import { ComponentsComponent } from './visualizarReporte/components/components.component';
 
 const routes: Routes = [
-  {path: '', component: ViewProductsComponent },
-  {path: 'components', component: ComponentsComponent },
+  {path: 'VisualizarReporte', component: ViewProductsComponent },
+  {path: 'GenerarReporte', component: ComponentsComponent },
   { path: '', redirectTo: '/', pathMatch: 'full' } 
 ];
 

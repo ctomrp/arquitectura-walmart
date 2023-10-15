@@ -5,11 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ViewProductsComponent } from './components/view-products/view-products.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule} from '@angular/common/http'
+import { HttpClientModule} from '@angular/common/http';
+import { ComponentsComponent } from './visualizarReporte/components/components.component'
 @NgModule({
   declarations: [
     AppComponent,
     ViewProductsComponent,
+    ComponentsComponent,
   ],
   imports: [
     BrowserModule,

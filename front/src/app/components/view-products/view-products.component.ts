@@ -3,6 +3,7 @@ import { BackendService } from 'src/app/services/backend.service';
 import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
 
+
 @Component({
   selector: 'app-view-products',
   templateUrl: './view-products.component.html',

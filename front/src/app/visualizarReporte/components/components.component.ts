@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { BackendService } from 'src/app/services/backend.service';
 import Swal from 'sweetalert2'
 
+
 @Component({
   selector: 'app-components',
   templateUrl: './components.component.html',

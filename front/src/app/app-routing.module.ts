@@ -6,11 +6,11 @@ import { ComponentsComponent } from './visualizarReporte/components/components.c
 const routes: Routes = [
   {path: 'VisualizarReporte', component: ViewProductsComponent },
   {path: 'GenerarReporte', component: ComponentsComponent },
-  { path: '', redirectTo: '/', pathMatch: 'full' } 
+  { path: '', redirectTo: 'VisualizarReporte', pathMatch: 'full' } 
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { useHash: true })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

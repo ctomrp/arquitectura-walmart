@@ -11,11 +11,6 @@ class CompraSerializer(serializers.ModelSerializer):
         model = Compra
         fields = '__all__'
 
-class CompraProductoSerializer(serializers.ModelSerializer):
-    class Meta: 
-        model= CompraProducto
-        fields = '__all__'
-
 class SucursalSerializer(serializers.ModelSerializer):
     class Meta: 
         model = Sucursal
@@ -26,13 +21,12 @@ class GrupoProductoSerializer(serializers.ModelSerializer):
         model = GrupoProducto
         fields = '__all__'
 
-class TipoProductoSerializer(serializers.ModelSerializer):
+class ReporteVentaSerializer(serializers.ModelSerializer):
     class Meta:
-        model = TipoProducto
+        model = Reporte_Venta
         fields = '__all__'
-
-class ReporteSerializer(serializers.ModelSerializer):
+    
+class ReporteDetalleProductoSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Reporte
+        model = Reporte_Detalle_Producto
         fields = '__all__'
-        

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { BackendService } from 'src/app/services/backend.service';
-import Swal from 'sweetalert2'
+import Swal from 'sweetalert2';
+
 
 
 @Component({

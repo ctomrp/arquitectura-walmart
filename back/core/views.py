@@ -145,7 +145,6 @@ class ReporteVentaAPI(APIView):
             cursor.execute(query)
             resultados = cursor.fetchall()
             for resultado in resultados:
-                print(resultados)
                 Reporte_Venta.objects.create(
                     fecha_reporte = datetime.strptime(resultado[0], "%Y-%m-%d").date(),
                     total_compra = resultado[1],
@@ -185,7 +184,7 @@ class ReporteDetalleProductoAPI(APIView):
 
             for resultado in resultados:
                 Reporte_Detalle_Producto.objects.create(
-                    fecha_reporte = resultado[0],
+                    fecha_reporte = datetime.strptime(resultado[0], "%Y-%m-%d").date(),
                     nombre_producto = resultado[1],
                     grupo_producto = resultado[2],
                     cantidad_total_vendida = resultado[3],

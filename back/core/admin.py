@@ -7,7 +7,7 @@ class ProductoForm(forms.ModelForm):
     class Meta:
         model = Producto
         exclude = []
-
+    
 class ProductoAdmin(admin.ModelAdmin):
     def has_module_permission(self, request):
         if request.user.username == 'supervisorlocal':

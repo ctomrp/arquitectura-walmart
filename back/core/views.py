@@ -1,6 +1,6 @@
 import json, os
 from datetime import datetime
-from django.db import connection
+from django.db import connection, transaction
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
@@ -163,7 +163,7 @@ class ReporteVentaAPI(APIView):
         return Response(status=status.HTTP_201_CREATED)
     
 class ReporteDetalleProductoAPI(APIView):
-    def post(self, request, format = None):
+    def post(self, request, format=None):
         query = """
             SELECT
                 DATE() AS "FECHA REPORTE",
@@ -182,13 +182,32 @@ class ReporteDetalleProductoAPI(APIView):
             cursor.execute(query)
             resultados = cursor.fetchall()
 
-            for resultado in resultados:
-                Reporte_Detalle_Producto.objects.create(
-                    fecha_reporte = datetime.strptime(resultado[0], "%Y-%m-%d").date(),
-                    nombre_producto = resultado[1],
-                    grupo_producto = resultado[2],
-                    cantidad_total_vendida = resultado[3],
+            with transaction.atomic():  # Utiliza una transacción para garantizar consistencia en la base de datos
+                for resultado in resultados:
+                    nombre_producto = resultado[1]
+                    grupo_producto = resultado[2]
+                    cantidad_total_vendida = resultado[3]
                     total_recaudado_prod = resultado[4]
-                )
+
+                    # Verifica si ya existe un registro para el producto y grupo en Reporte_Detalle_Producto
+                    existing_reporte = Reporte_Detalle_Producto.objects.filter(
+                        nombre_producto=nombre_producto,
+                        grupo_producto=grupo_producto
+                    ).first()
+
+                    if existing_reporte:
+                        # Si existe, actualiza las columnas específicas
+                        existing_reporte.cantidad_total_vendida = cantidad_total_vendida
+                        existing_reporte.total_recaudado_prod = total_recaudado_prod
+                        existing_reporte.save()
+                    else:
+                        # Si no existe, crea un nuevo registro
+                        Reporte_Detalle_Producto.objects.create(
+                            fecha_reporte=datetime.strptime(resultado[0], "%Y-%m-%d").date(),
+                            nombre_producto=nombre_producto,
+                            grupo_producto=grupo_producto,
+                            cantidad_total_vendida=cantidad_total_vendida,
+                            total_recaudado_prod=total_recaudado_prod
+                        )
 
         return Response(status=status.HTTP_201_CREATED)

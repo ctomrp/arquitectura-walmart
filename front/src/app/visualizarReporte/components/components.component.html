@@ -7,25 +7,21 @@
 </head>
 <body>
     <!--navbar-->
-    <nav class="navbar bg-primary navbar-expand-lg bg-body-tertiary">
-      <div class="container-fluid">
-        <a class="navbar-brand" routerLink="/generar-reporte">
-          <img src="https://logohistory.net/wp-content/uploads/2023/06/Walmart-Logo.png" alt="" width="70px" height="45px">
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <a class="nav-link" routerLink="/visualiza-reporte">Visualizar Reporte</a>
-            <a class="nav-link" routerLink="/generar-reporte">Generar Reporte</a>
-            <a class="nav-link" href="http://127.0.0.1:8000/admin/login/?next=/admin/">Django Admin</a>
+    <nav class="navbar  bg-primary navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" routerLink="components.conponent"><img src="https://logohistory.net/wp-content/uploads/2023/06/Walmart-Logo.png" alt="" width="70px" height="45px"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link active" aria-current="page" routerLink="/VisualizarReporte">Visualizar Reporte</a>
+              <a class="nav-link" routerLink="/GenerarReporte">Generar Reporte</a>
+              <a class="nav-link" href="http://127.0.0.1:8000/admin/login/?next=/admin/">Django Admin</a>
+            </div>
           </div>
         </div>
-      </div>
-    </nav>
-    
-    
+      </nav> 
     <!--content-->  
     <br><br>
     <h1 class="text-center">Sistema de monitorización de gondolas</h1>

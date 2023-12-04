@@ -15,24 +15,24 @@ export class ComponentsComponent {
   datosReporteDetalleProducto: any | undefined;
   constructor(private backendService:BackendService) {}
 
-  async postReport(){
-    try {
-      await this.backendService.postReport().subscribe(data=>{
-        this.reporte = data
-        Swal.fire(
-          'Datos Guardados!',
-          'Los datos de compra han sido almacenados, ahora puede generar los reportes de hoy',
-          'success'
-        )
-      })
-    } catch (error) {
-      console.log(error)
-    }
+async postReport(){
+  try {
+    await this.backendService.postReport().subscribe(data=>{
+      this.reporte = data
+      Swal.fire(
+        'Datos Guardados!',
+        'Los datos de compra han sido almacenados, ahora puede generar los reportes de hoy',
+        'success'
+      )
+    })
+  } catch (error) {
+    console.log(error)
   }
+}
 
   async creacionReporteVenta(){
     try{
-      await this.backendService.obtenerReporteVenta().subscribe(data => {
+      await this.backendService.postReporteVenta().subscribe(data => {
         this.datosReporteVenta = data
       })
     } catch (error){
@@ -42,7 +42,7 @@ export class ComponentsComponent {
 
   async creacionReporteDetalleVenta(){
     try{
-      await this.backendService.obtenerReporteDetalleProducto().subscribe(data => {
+      await this.backendService.postReporteDetalleProducto().subscribe(data => {
         this.datosReporteDetalleProducto = data
       })
     } catch (error){
@@ -53,5 +53,10 @@ export class ComponentsComponent {
   crearReportes(){
     this.creacionReporteDetalleVenta();
     this.creacionReporteVenta();
+    Swal.fire(
+      'Reportes Creados!',
+      'El reporte Venta y Detalle Producto han sidos creados exitosamente',
+      'success'
+    )
   }
 }

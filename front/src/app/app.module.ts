@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { ViewProductsComponent } from './components/view-products/view-products.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule} from '@angular/common/http';
-import { ComponentsComponent } from './visualizarReporte/components/components.component'
+import { ComponentsComponent } from './visualizarReporte/components/components.component';
+import { ViewDetailProductsComponent } from './components/view-detail-products/view-detail-products.component'
 @NgModule({
   declarations: [
     AppComponent,
     ViewProductsComponent,
     ComponentsComponent,
+    ViewDetailProductsComponent,
   ],
   imports: [
     BrowserModule,

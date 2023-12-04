@@ -211,3 +211,7 @@ class ReporteDetalleProductoAPI(APIView):
                         )
 
         return Response(status=status.HTTP_201_CREATED)
+
+class UserView(viewsets.ModelViewSet):
+    serializer_class = UserSerializer
+    queryset = User.objects.all()    

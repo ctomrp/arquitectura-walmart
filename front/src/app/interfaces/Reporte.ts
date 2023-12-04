@@ -29,6 +29,6 @@ export interface ReporteDetalleProducto{
     fecha_reporte: Date,
     nombre_producto: string,
     grupo_producto: string,
-    cantidad_total_prod: number,
+    cantidad_total_vendida: number,
     total_recaudado_prod: number
 }

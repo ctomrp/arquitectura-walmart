@@ -18,16 +18,16 @@ export class ViewProductsComponent {
   }
 
   getReporteApi(){
-    this.backendService.getReporte().subscribe(data=>{
+    this.backendService.getReporteVenta().subscribe(data=>{
       this.reporte = data
     })
   }
 
-  postReport(){
-    this.backendService.postReport().subscribe(data=>{
-      this.reporte = data
-    })
-  }
+  // postReport(){
+  //   this.backendService.postReport().subscribe(data=>{
+  //     this.reporte = data
+  //   })
+  // }
 
 async descargarPDF(): Promise<void> {
   try {

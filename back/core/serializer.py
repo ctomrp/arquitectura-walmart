@@ -22,6 +22,7 @@ class GrupoProductoSerializer(serializers.ModelSerializer):
         model = GrupoProducto
         fields = '__all__'
 
+"""
 class ReporteVentaSerializer(serializers.ModelSerializer):
     class Meta:
         model = Reporte_Venta
@@ -31,7 +32,8 @@ class ReporteDetalleProductoSerializer(serializers.ModelSerializer):
     class Meta:
         model = Reporte_Detalle_Producto
         fields = '__all__'
-
+"""
+        
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User

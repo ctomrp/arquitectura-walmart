@@ -1,7 +1,13 @@
 [
     {
       "fecha_compra": "2023-01-01T10:30:00",
-      "sucursal_ID": 27,
+      "sucursal": [
+        {
+          "sucursal_ID": 27,
+          "nombre_sucursal": "Lider Mall Plaza Vespucio",
+          "ubicacion": "Mall Plaza Vespucio"
+        }
+      ],
       "productos": [
         {
           "nombre": "Papas fritas",
@@ -16,21 +22,27 @@
           "precio": 890,
           "descripcion": "Gaseosa individual",
           "tipo": "Gaseosa individual",
-          "grupo": "b",
+          "grupo": "B",
           "cantidad": 1
         }
       ]
     },
     {
       "fecha_compra": "2023-01-02T14:15:00",
-      "sucursal_ID": 31,
+      "sucursal": [
+        {
+          "sucursal_ID": 31,
+          "nombre_sucursal": "Lider San Ramon",
+          "ubicacion": "Av. Santa Rosa 9233"
+        }
+      ],
       "productos": [
         {
           "nombre": "Bigtime",
           "precio": 950,
           "descripcion": "Chicle",
           "tipo": "Chicle",
-          "grupo": "a",
+          "grupo": "A",
           "cantidad": 2
         },
         {
@@ -45,14 +57,20 @@
     },
     {
       "fecha_compra": "2023-01-03T16:45:00",
-      "sucursal_ID": 27,
+      "sucursal": [
+        {
+          "sucursal_ID": 27,
+          "nombre_sucursal": "Lider Mall Plaza Vespucio",
+          "ubicacion": "Mall Plaza Vespucio"
+        }
+      ],
       "productos": [
         {
           "nombre": "Chicle Trident",
           "precio": 500,
           "descripcion": "Chicle de menta",
           "tipo": "Chicle",
-          "grupo": "a",
+          "grupo": "A",
           "cantidad": 3
         },
         {
@@ -60,21 +78,27 @@
           "precio": 800,
           "descripcion": "Gaseosa individual",
           "tipo": "Gaseosa individual",
-          "grupo": "b",
+          "grupo": "B",
           "cantidad": 2
         }
       ]
     },
     {
       "fecha_compra": "2023-01-04T12:00:00",
-      "sucursal_ID": 31,
+      "sucursal": [
+        {
+          "sucursal_ID": 31,
+          "nombre_sucursal": "Lider San Ramon",
+          "ubicacion": "Av. Santa Rosa 9233"
+        }
+      ],
       "productos": [
         {
           "nombre": "Chocolate Milka",
           "precio": 1200,
           "descripcion": "Chocolate con leche",
           "tipo": "Chocolate",
-          "grupo": "c",
+          "grupo": "C",
           "cantidad": 1
         },
         {
@@ -82,14 +106,20 @@
           "precio": 800,
           "descripcion": "Rollo de papel higiénico",
           "tipo": "Higiene",
-          "grupo": "b",
+          "grupo": "B",
           "cantidad": 3
         }
       ]
     },
     {
       "fecha_compra": "2023-01-05T15:30:00",
-      "sucursal_ID": 27,
+      "sucursal": [
+        {
+          "sucursal_ID": 27,
+          "nombre_sucursal": "Lider Mall Plaza Vespucio",
+          "ubicacion": "Mall Plaza Vespucio"
+        }
+      ],
       "productos": [
         {
           "nombre": "Leche desnatada 1L",
@@ -104,21 +134,27 @@
           "precio": 800,
           "descripcion": "Maní salado",
           "tipo": "Snack",
-          "grupo": "d",
+          "grupo": "D",
           "cantidad": 2
         }
       ]
     },
     {
       "fecha_compra": "2023-01-06T17:00:00",
-      "sucursal_ID": 31,
+      "sucursal": [
+        {
+          "sucursal_ID": 31,
+          "nombre_sucursal": "Lider San Ramon",
+          "ubicacion": "Av. Santa Rosa 9233"
+        }
+      ],
       "productos": [
         {
           "nombre": "Chocolate Toblerone",
           "precio": 1500,
           "descripcion": "Chocolate suizo",
           "tipo": "Chocolate",
-          "grupo": "c",
+          "grupo": "C",
           "cantidad": 2
         },
         {
@@ -133,14 +169,20 @@
     },
     {
       "fecha_compra": "2023-01-07T11:45:00",
-      "sucursal_ID": 27,
+      "sucursal": [
+        {
+          "sucursal_ID": 27,
+          "nombre_sucursal": "Lider Mall Plaza Vespucio",
+          "ubicacion": "Mall Plaza Vespucio"
+        }
+      ],
       "productos": [
         {
           "nombre": "Agua mineral 1.5L",
           "precio": 700,
           "descripcion": "Agua mineral sin gas",
           "tipo": "Bebida",
-          "grupo": "c",
+          "grupo": "C",
           "cantidad": 2
         },
         {
@@ -155,7 +197,13 @@
     },
     {
       "fecha_compra": "2023-01-08T16:30:00",
-      "sucursal_ID": 31,
+      "sucursal": [
+        {
+          "sucursal_ID": 31,
+          "nombre_sucursal": "Lider San Ramon",
+          "ubicacion": "Av. Santa Rosa 9233"
+        }
+      ],
       "productos": [
         {
           "nombre": "Tomates kg",
@@ -170,14 +218,20 @@
           "precio": 1000,
           "descripcion": "Aceitunas verdes en conserva",
           "tipo": "Conserva",
-          "grupo": "d",
+          "grupo": "D",
           "cantidad": 2
         }
       ]
     },
     {
       "fecha_compra": "2023-01-09T09:00:00",
-      "sucursal_ID": 27,
+      "sucursal": [
+        {
+          "sucursal_ID": 27,
+          "nombre_sucursal": "Lider Mall Plaza Vespucio",
+          "ubicacion": "Mall Plaza Vespucio"
+        }
+      ],
       "productos": [
         {
           "nombre": "Yogur Natural 150g",
@@ -199,7 +253,13 @@
     },
     {
       "fecha_compra": "2023-01-10T13:45:00",
-      "sucursal_ID": 31,
+      "sucursal": [
+        {
+          "sucursal_ID": 31,
+          "nombre_sucursal": "Lider San Ramon",
+          "ubicacion": "Av. Santa Rosa 9233"
+        }
+      ],
       "productos": [
         {
           "nombre": "Arroz 1kg",
@@ -221,7 +281,13 @@
     },
     {
       "fecha_compra": "2023-01-11T18:30:00",
-      "sucursal_ID": 27,
+      "sucursal": [
+        {
+          "sucursal_ID": 27,
+          "nombre_sucursal": "Lider Mall Plaza Vespucio",
+          "ubicacion": "Mall Plaza Vespucio"
+        }
+      ],
       "productos": [
         {
           "nombre": "Queso Cottage",
@@ -236,14 +302,20 @@
           "precio": 2500,
           "descripcion": "Cerveza en pack de 6 unidades",
           "tipo": "Cerveza",
-          "grupo": "b",
+          "grupo": "B",
           "cantidad": 1
         }
       ]
     },
     {
       "fecha_compra": "2023-01-12T10:00:00",
-      "sucursal_ID": 31,
+      "sucursal": [
+        {
+          "sucursal_ID": 31,
+          "nombre_sucursal": "Lider San Ramon",
+          "ubicacion": "Av. Santa Rosa 9233"
+        }
+      ],
       "productos": [
         {
           "nombre": "Pescado Fresco kg",
@@ -258,14 +330,20 @@
           "precio": 1800,
           "descripcion": "Hamburguesas de carne",
           "tipo": "Carne",
-          "grupo": "d",
+          "grupo": "D",
           "cantidad": 1
         }
       ]
     },
     {
       "fecha_compra": "2023-01-13T14:15:00",
-      "sucursal_ID": 27,
+      "sucursal": [
+        {
+          "sucursal_ID": 27,
+          "nombre_sucursal": "Lider Mall Plaza Vespucio",
+          "ubicacion": "Mall Plaza Vespucio"
+        }
+      ],
       "productos": [
         {
           "nombre": "Pasta Espagueti 500g",
@@ -287,7 +365,13 @@
     },
     {
       "fecha_compra": "2023-01-14T09:30:00",
-      "sucursal_ID": 31,
+      "sucursal": [
+        {
+          "sucursal_ID": 31,
+          "nombre_sucursal": "Lider San Ramon",
+          "ubicacion": "Av. Santa Rosa 9233"
+        }
+      ],
       "productos": [
         {
           "nombre": "Naranjas kg",
@@ -309,7 +393,13 @@
     },
     {
       "fecha_compra": "2023-01-15T10:30:00",
-      "sucursal_ID": 27,
+      "sucursal": [
+        {
+          "sucursal_ID": 27,
+          "nombre_sucursal": "Lider Mall Plaza Vespucio",
+          "ubicacion": "Mall Plaza Vespucio"
+        }
+      ],
       "productos": [
         {
           "nombre": "Papas fritas",
@@ -324,21 +414,27 @@
           "precio": 890,
           "descripcion": "Gaseosa individual",
           "tipo": "Gaseosa individual",
-          "grupo": "b",
+          "grupo": "B",
           "cantidad": 1
         }
       ]
     },
     {
       "fecha_compra": "2023-01-16T14:15:00",
-      "sucursal_ID": 31,
+      "sucursal": [
+        {
+          "sucursal_ID": 31,
+          "nombre_sucursal": "Lider San Ramon",
+          "ubicacion": "Av. Santa Rosa 9233"
+        }
+      ],
       "productos": [
         {
           "nombre": "Bigtime",
           "precio": 950,
           "descripcion": "Chicle",
           "tipo": "Chicle",
-          "grupo": "a",
+          "grupo": "A",
           "cantidad": 2
         },
         {

@@ -7,7 +7,7 @@ import { ViewDetailProductsComponent } from './components/view-detail-products/v
 const routes: Routes = [
   {path: 'VisualizarDetalleProducto',component:ViewDetailProductsComponent},
   {path: 'VisualizarReporte', component: ViewProductsComponent },
-  {path: 'GenerarReporte', component: ComponentsComponent },
+  {path: 'ObtenerDatosAPI', component: ComponentsComponent },
   { path: '', redirectTo: 'VisualizarReporte', pathMatch: 'full' } 
 ];
 

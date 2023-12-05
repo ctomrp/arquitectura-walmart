@@ -30,29 +30,8 @@ async postReport(){
   }
 }
 
-  async creacionReporteVenta(){
-    try{
-      await this.backendService.postReporteVenta().subscribe(data => {
-        this.datosReporteVenta = data
-      })
-    } catch (error){
-      console.log(error)
-    }
-  }
-
-  async creacionReporteDetalleVenta(){
-    try{
-      await this.backendService.postReporteDetalleProducto().subscribe(data => {
-        this.datosReporteDetalleProducto = data
-      })
-    } catch (error){
-      console.log(error)
-    }
-  }
 
   crearReportes(){
-    this.creacionReporteDetalleVenta();
-    this.creacionReporteVenta();
     Swal.fire(
       'Reportes Creados!',
       'El reporte Venta y Detalle Producto han sidos creados exitosamente',

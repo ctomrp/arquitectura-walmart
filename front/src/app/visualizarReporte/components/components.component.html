@@ -16,9 +16,9 @@
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
               <a class="nav-link active" aria-current="page" routerLink="/VisualizarReporte">Visualizar Reporte Venta</a>
-              <a class="nav-link" routerLink="/VisualizarDetalleProducto">Visualizar Reporte Detalle Producto</a>
-              <a class="nav-link" routerLink="/GenerarReporte">Generar Reporte</a>
-              <a class="nav-link" href="http://127.0.0.1:8000/admin/login/?next=/admin/">Django Admin</a>
+              <a class="nav-link active" routerLink="/VisualizarDetalleProducto">Visualizar Reporte Detalle Producto</a>
+              <a class="nav-link active" routerLink="/ObtenerDatosAPI">Traer Datos de la API</a>
+              <a class="nav-link active" href="http://127.0.0.1:8000/admin/login/?next=/admin/">Django Admin</a>
             </div>
           </div>
         </div>
@@ -27,8 +27,7 @@
     <br><br>
     <h1 class="text-center">Sistema de monitorización de gondolas</h1>
     <br>
-    <div class="container">
-        <button (click)="postReport()" class="btn btn-primary">Traer datos API</button> 
-        <button (click)="crearReportes()" class="btn btn-success">Generar Reportes</button>
+    <div class="d-flex justify-content-center">
+        <button (click)="postReport()" class="btn btn-primary">Traer datos API</button>
     </div>
 </body>   

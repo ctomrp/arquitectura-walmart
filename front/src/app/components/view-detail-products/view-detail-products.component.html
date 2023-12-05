@@ -17,10 +17,10 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-            <a class="nav-link" routerLink="/VisualizarReporte">Visualizar Reporte Venta</a>
-            <a class="nav-link" routerLink="/VisualizarDetalleProducto">Visualizar Reporte Detalle Producto</a>
-            <a class="nav-link" routerLink="/GenerarReporte">Generar Reporte</a>
-            <a class="nav-link" href="http://127.0.0.1:8000/admin/login/?next=/admin/">Django Admin</a>
+            <a class="nav-link active" routerLink="/VisualizarReporte">Visualizar Reporte Venta</a>
+            <a class="nav-link active" routerLink="/VisualizarDetalleProducto">Visualizar Reporte Detalle Producto</a>
+            <a class="nav-link active" routerLink="/ObtenerDatosAPI">Traer Datos de la API</a>
+            <a class="nav-link active" href="http://127.0.0.1:8000/admin/login/?next=/admin/">Django Admin</a>
           </div>
         </div>
       </div>
@@ -43,7 +43,6 @@
               <table class="table table-striped">
                 <thead>
                   <tr>
-                    <th scope="col">Id</th>
                     <th scope="col">Fecha Reporte</th>
                     <th scope="col">Nombre Producto</th>
                     <th scope="col">Grupo Producto</th>
@@ -53,12 +52,11 @@
                 </thead>
                 <tbody>
                   <tr *ngFor="let reporte of paginatedReporte">
-                    <th scope="row">{{ reporte.id }}</th>
-                    <td>{{reporte.fecha_reporte}}</td>
+                    <th scope="row">{{reporte.fecha_reporte}}</th>
                     <td>{{reporte.nombre_producto}}</td>
                     <td>{{reporte.grupo_producto}}</td>
                     <td>{{reporte.cantidad_total_vendida}}</td>
-                    <td>{{reporte.total_recaudado_prod}}</td>
+                    <td>${{reporte.total_recaudado_prod}}</td>
                   </tr>
                 </tbody>
               </table>

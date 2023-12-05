@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs'
-import { ReporteVenta, ReporteDetalleProducto } from '../interfaces/Reporte';
+import { ReporteVenta, ReporteDetalleProducto } from '../interfaces/Reportes';
 import { Producto } from '../interfaces/Producto';
 import { Sucursal } from '../interfaces/Sucursal';
 import { GrupoProducto } from '../interfaces/GrupoProducto';
@@ -11,9 +11,7 @@ import { User } from '../interfaces/User';
   providedIn: 'root'
 })
 export class BackendService {
-  private urlReporteGet: string = "http://127.0.0.1:8000/ReporteVenta/";
-  private urlReporteDetalleGet : string = "http://127.0.0.1:8000/ReporteDetalleProducto/";
-  private urlReporte: string = "http://127.0.0.1:8000/reporte-venta/";
+  private urlReporte: string = "http://127.0.0.1:8000/reporte_venta/";
   private urlReporteDetalle: string = "http://127.0.0.1:8000/reporte_detalle_producto/";
   private urlProducto: string = "";
   private urlProductoGet: string = "http://127.0.0.1:8000/Producto/";
@@ -37,13 +35,14 @@ postReport(): Observable<Compra>{
   return this.http.post<Compra>('http://127.0.0.1:8000/crear_reporte_desde_json/', Observable);
 }
 
-//Crear Reporte 
+/*Crear Reporte 
 postReporteVenta(): Observable<ReporteVenta> {
   return this.http.post<ReporteVenta>(this.urlReporte, Observable);
 }
+*/
 //Obtener Reporte 
-getReporteVenta(): Observable<ReporteVenta>{
-  return this.http.get<ReporteVenta>(this.urlReporteGet)
+getReporteVenta(): Observable<ReporteVenta[]>{
+  return this.http.get<ReporteVenta[]>(this.urlReporte)
 }
 //Actulizar Reporte
 updateReporteVenta(id:number,Reporte: any):Observable<ReporteVenta>{
@@ -56,13 +55,14 @@ deleteReporteVenta(id:number):Observable<ReporteVenta>{
   return this.http.delete<ReporteVenta>(urlReporte)
 }
 
-//Crear Reporte Detalle Producto
+/*Crear Reporte Detalle Producto
 postReporteDetalleProducto(): Observable<ReporteDetalleProducto> {
   return this.http.post<ReporteDetalleProducto>(this.urlReporteDetalle, Observable);
 }
+*/
 //Obtener Reporte Detalle Producto
-GetReporteDetalleProducto():Observable<ReporteDetalleProducto>{
-  return this.http.get<ReporteDetalleProducto>(this.urlReporteDetalleGet);
+GetReporteDetalleProducto():Observable<ReporteDetalleProducto[]>{
+  return this.http.get<ReporteDetalleProducto[]>(this.urlReporteDetalle);
 }
 //Actualizar Reporte Detalle Producto
 updateReporteDetalleProducto(id:number,Reporte: any):Observable<ReporteDetalleProducto>{

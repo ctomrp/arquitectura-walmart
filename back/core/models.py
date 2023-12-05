@@ -18,7 +18,7 @@ class Producto(models.Model):
     nombre = models.CharField(max_length=50)
     precio = models.IntegerField()
     descripcion = models.TextField()
-    grupo = models.ForeignKey(GrupoProducto, on_delete=models.CASCADE)
+    grupo = models.CharField(max_length=10)
 
     def __str__(self):
         return self.nombre    
@@ -34,7 +34,8 @@ class Compra(models.Model):
     def __str__(self):
         return self.fecha_hora_compra
 
-
+"""
+# Ya no serán requeridos, porque no se guardarán en la base de datos. Pero por si acaso los dejaré aquí.
 class Reporte_Venta(models.Model):
     fecha_reporte = models.DateField()
     total_compra = models.IntegerField()
@@ -62,3 +63,4 @@ class Reporte_Detalle_Producto(models.Model):
     
     def __str__(self):
         return self.fecha_reporte
+"""

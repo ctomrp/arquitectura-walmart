@@ -3,18 +3,15 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ViewProductsComponent } from './components/view-products/view-products.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule} from '@angular/common/http';
-import { ComponentsComponent } from './visualizarReporte/components/components.component';
-import { ViewDetailProductsComponent } from './components/view-detail-products/view-detail-products.component'
+import { HttpClientModule } from '@angular/common/http';
+
+import { ProductsDetail } from './pages/products-detail/products-detail.component';
+import { Products } from './pages/products/products.component';
+import { Report } from './pages/report/report.component';
+
 @NgModule({
-  declarations: [
-    AppComponent,
-    ViewProductsComponent,
-    ComponentsComponent,
-    ViewDetailProductsComponent,
-  ],
+  declarations: [AppComponent, ProductsDetail, Products, Report],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -22,6 +19,6 @@ import { ViewDetailProductsComponent } from './components/view-detail-products/v
     ReactiveFormsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

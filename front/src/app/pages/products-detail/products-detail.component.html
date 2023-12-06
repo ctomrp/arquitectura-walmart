@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frontend Test</title>
+  </head>
+  <body>
+    <!--navbar-->
+    <nav class="navbar bg-primary navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" routerLink="/generar-reporte">
+          <img
+            src="https://logohistory.net/wp-content/uploads/2023/06/Walmart-Logo.png"
+            alt=""
+            width="70px"
+            height="45px"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link active" routerLink="/VisualizarReporte"
+              >Visualizar Reporte Venta</a
+            >
+            <a class="nav-link active" routerLink="/VisualizarDetalleProducto"
+              >Visualizar Reporte Detalle Producto</a
+            >
+            <a class="nav-link active" routerLink="/ObtenerDatosAPI"
+              >Traer Datos de la API</a
+            >
+            <a
+              class="nav-link active"
+              href="http://127.0.0.1:8000/admin/login/?next=/admin/"
+              >Django Admin</a
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!--cont-->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="text-center">Sistema de monitorización de gondolas</h1>
+          <h3 class="text-center">Reporte Detalle Producto</h3>
+          <br />
+          <p class="d-inline-flex gap-1">
+            <button
+              type="button"
+              class="btn btn-primary"
+              (click)="getReporteApi()"
+            >
+              Visualizar Reporte Detalle Producto
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary"
+              (click)="descargarPDF()"
+            >
+              Descargar Reporte
+            </button>
+          </p>
+          <br />
+          <div id="htmlData">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th scope="col">Fecha Reporte</th>
+                  <th scope="col">Nombre Producto</th>
+                  <th scope="col">Grupo Producto</th>
+                  <th scope="col">Cantidad Total Vendida</th>
+                  <th scope="col">Total Recaudado</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let reporte of paginatedReporte">
+                  <th scope="row">{{ reporte.fecha_reporte }}</th>
+                  <td>{{ reporte.nombre_producto }}</td>
+                  <td>{{ reporte.grupo_producto }}</td>
+                  <td>{{ reporte.cantidad_total_vendida }}</td>
+                  <td>${{ reporte.total_recaudado_prod }}</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <!-- Paginación -->
+            <ul class="pagination">
+              <li class="page-item" [class.disabled]="currentPage === 1">
+                <a
+                  class="page-link"
+                  (click)="currentPage = currentPage - 1"
+                  href="#"
+                  >Anterior</a
+                >
+              </li>
+              <li
+                class="page-item"
+                [class.disabled]="currentPage === totalPages"
+              >
+                <a
+                  class="page-link"
+                  (click)="currentPage = currentPage + 1"
+                  href="#"
+                  >Siguiente</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

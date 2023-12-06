@@ -1,18 +1,19 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ViewProductsComponent } from './components/view-products/view-products.component';
-import { ComponentsComponent } from './visualizarReporte/components/components.component';
-import { ViewDetailProductsComponent } from './components/view-detail-products/view-detail-products.component';
+
+import { Products } from './pages/products/products.component';
+import { ProductsDetail } from './pages/products-detail/products-detail.component';
+import { Report } from './pages/report/report.component';
 
 const routes: Routes = [
-  {path: 'VisualizarDetalleProducto',component:ViewDetailProductsComponent},
-  {path: 'VisualizarReporte', component: ViewProductsComponent },
-  {path: 'ObtenerDatosAPI', component: ComponentsComponent },
-  { path: '', redirectTo: 'VisualizarReporte', pathMatch: 'full' } 
+  { path: 'VisualizarDetalleProducto', component: ProductsDetail },
+  { path: 'VisualizarReporte', component: Products },
+  { path: 'ObtenerDatosAPI', component: Report },
+  { path: '', redirectTo: 'VisualizarReporte', pathMatch: 'full' },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes, { useHash: true })],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

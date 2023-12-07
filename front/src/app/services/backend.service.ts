@@ -11,25 +11,25 @@ import { User } from '../interfaces/User';
   providedIn: 'root',
 })
 export class BackendService {
-  private urlReporte: string = 'http://127.0.0.1:8000/reporte_venta/';
+  private urlReporte: string = 'http://127.0.0.1:8000/reporte-venta/';
   private urlReporteDetalle: string =
-    'http://127.0.0.1:8000/reporte_detalle_producto/';
+    'http://127.0.0.1:8000/reporte-detalle-producto/';
   private urlProducto: string = '';
-  private urlProductoGet: string = 'http://127.0.0.1:8000/Producto/';
+  private urlProductoGet: string = 'http://127.0.0.1:8000/producto/';
   private urlSucursal: string = '';
-  private urlSucursalGet: string = 'http://127.0.0.1:8000/Sucursal/';
+  private urlSucursalGet: string = 'http://127.0.0.1:8000/sucursal/';
   private urlCompra: string = '';
-  private urlCompraGet: string = 'http://127.0.0.1:8000/Compra/';
+  private urlCompraGet: string = 'http://127.0.0.1:8000/compra/';
   private urlGrupoProducto: string = '';
-  private urlGrupoProductoGet: string = 'http://127.0.0.1:8000/GrupoProducto/';
-  private urlUser: string = 'http://127.0.0.1:8000/User/';
+  private urlGrupoProductoGet: string = 'http://127.0.0.1:8000/grupo-producto/';
+  private urlUser: string = 'http://127.0.0.1:8000/user/';
 
   constructor(private http: HttpClient) {}
 
   // //Crear Reporte de json
   postReport(): Observable<Compra> {
     return this.http.post<Compra>(
-      'http://127.0.0.1:8000/crear_reporte_desde_json/',
+      'http://127.0.0.1:8000/crear-reporte-desde-json/',
       Observable
     );
   }

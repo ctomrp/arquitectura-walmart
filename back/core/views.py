@@ -1,4 +1,5 @@
-import datetime, json, jwt, os
+import datetime as dt, json, jwt, os
+from datetime import datetime
 from django.db import connection
 from django.http import JsonResponse
 from rest_framework import status, viewsets
@@ -33,8 +34,8 @@ class LoginView(APIView):
 
         payload = {
             'id': user.id,
-            'exp': datetime.datetime.utcnow() + datetime.timedelta(minutes=60),
-            'iat': datetime.datetime.utcnow()
+            'exp': dt.datetime.utcnow() + dt.timedelta(minutes=60),
+            'iat': dt.datetime.utcnow()
         }
 
         token = jwt.encode(payload, 'secret', algorithm='HS256')

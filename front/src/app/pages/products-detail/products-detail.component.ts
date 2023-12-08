@@ -87,7 +87,7 @@ export class ProductsDetail {
   }
 
   getReporteApi() {
-    this.backendService.GetReporteDetalleProducto().subscribe((data) => {
+    this.backendService.getReporteDetalleProducto().subscribe((data) => {
       this.reporte = data;
     });
   }

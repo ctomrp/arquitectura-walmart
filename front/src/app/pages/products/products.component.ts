@@ -20,12 +20,6 @@ export class Products {
     });
   }
 
-  // postReport(){
-  //   this.backendService.postReport().subscribe(data=>{
-  //     this.reporte = data
-  //   })
-  // }
-
   async descargarPDF(): Promise<void> {
     try {
       const documento = new jsPDF('p', 'pt', 'a4');

@@ -1,0 +1,39 @@
+<app-navbar />
+
+<main class="container w-25">
+  <form [formGroup]="form" (submit)="submit()">
+    <img
+      class="mb-4"
+      src="https://logohistory.net/wp-content/uploads/2023/06/Walmart-Logo.png"
+      alt=""
+      width="72"
+      height="57"
+    />
+    <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+
+    <input
+      class="form-control"
+      placeholder="Username"
+      required
+      formControlName="name"
+    />
+
+    <input
+      type="email"
+      class="form-control"
+      placeholder="name@example.com"
+      required
+      formControlName="email"
+    />
+
+    <input
+      type="password"
+      class="form-control"
+      placeholder="Password"
+      required
+      formControlName="password"
+    />
+
+    <button class="btn btn-primary w-100 py-2" type="submit">Sign in</button>
+  </form>
+</main>

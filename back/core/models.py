@@ -1,15 +1,29 @@
 from django.db import models
+from django.contrib.auth.models import AbstractUser
+
+#LAS SIGUIENTES CLASES SE ENCARGAN DE UN USUARIO CUSTOM + JWT
+class User(AbstractUser):
+    name = models.CharField(max_length=255)
+    email = models.EmailField(max_length=255, unique=True)
+    password = models.CharField(max_length=255)
+    username = None
+
+    USERNAME_FIELD = 'email'
+    REQUIRED_FIELDS = []
+#FIN DEL CODIGO PARA USUARIO CUSTOM + JWT
+
+
+class GrupoProducto(models.Model):
+    nombre = models.CharField(max_length=10)
+    
+    def __str__(self):
+        return self.nombre
+
 
 class Sucursal(models.Model):
     nombre = models.CharField(max_length=40)
     ubicacion = models.CharField(max_length=60)
 
-    def __str__(self):
-        return self.nombre
-
-class GrupoProducto(models.Model):
-    nombre = models.CharField(max_length=10)
-    
     def __str__(self):
         return self.nombre
 
@@ -23,6 +37,7 @@ class Producto(models.Model):
     def __str__(self):
         return self.nombre    
 
+
 class Compra(models.Model):
     fecha_hora_compra = models.DateTimeField()
     producto = models.CharField(max_length=50)
@@ -33,34 +48,4 @@ class Compra(models.Model):
 
     def __str__(self):
         return self.fecha_hora_compra
-
-"""
-# Ya no serán requeridos, porque no se guardarán en la base de datos. Pero por si acaso los dejaré aquí.
-class Reporte_Venta(models.Model):
-    fecha_reporte = models.DateField()
-    total_compra = models.IntegerField()
-    cantidad_prod_grupo_a = models.IntegerField()
-    total_compra_grupo_a = models.IntegerField()
-    cantidad_prod_grupo_b = models.IntegerField()
-    total_compra_grupo_b = models.IntegerField()
-    cantidad_prod_grupo_c = models.IntegerField()
-    total_compra_grupo_c = models.IntegerField()
-    cantidad_prod_grupo_d = models.IntegerField()
-    total_compra_grupo_d = models.IntegerField()
-    cantidad_prod_sin_grupo = models.IntegerField()
-    total_compra_sin_grupo = models.IntegerField()
-
-    def __str__(self):
-        return self.fecha_reporte
-
-
-class Reporte_Detalle_Producto(models.Model):
-    fecha_reporte = models.DateField()
-    nombre_producto = models.CharField(max_length=50)
-    grupo_producto = models.CharField(max_length=10)
-    cantidad_total_vendida = models.IntegerField()
-    total_recaudado_prod = models.IntegerField()
     
-    def __str__(self):
-        return self.fecha_reporte
-"""

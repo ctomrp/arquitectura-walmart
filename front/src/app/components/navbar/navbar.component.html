@@ -1,0 +1,19 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+  <div class="container-fluid">
+    <div class="col-4 d-flex">
+      <a routerLink="/home" class="navbar-brand">Home</a>
+    </div>
+    <div class="col-4 d-flex">
+      <a routerLink="/reporte" class="navbar-brand">Reporte de venta</a>
+      <a routerLink="/detalle-producto" class="navbar-brand"
+        >Reporte detalle de productos</a
+      >
+      <a routerLink="/data-api" class="navbar-brand">Consultar Walmart</a>
+    </div>
+    <div class="col-4 d-flex justify-content-end">
+      <a routerLink="/login" class="navbar-brand">Ingresar</a>
+      <a routerLink="/register" class="navbar-brand">Registrar</a>
+      <a routerLink="/home" class="navbar-brand" (click)="logout()">Logout</a>
+    </div>
+  </div>
+</nav>

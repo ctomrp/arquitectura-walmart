@@ -7,47 +7,7 @@
   </head>
   <body>
     <!--navbar-->
-    <nav class="navbar bg-primary navbar-expand-lg bg-body-tertiary">
-      <div class="container-fluid">
-        <a class="navbar-brand" routerLink="/generar-reporte">
-          <img
-            src="https://logohistory.net/wp-content/uploads/2023/06/Walmart-Logo.png"
-            alt=""
-            width="70px"
-            height="45px"
-          />
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNavAltMarkup"
-          aria-controls="navbarNavAltMarkup"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <a class="nav-link active" routerLink="/VisualizarReporte"
-              >Visualizar Reporte Venta</a
-            >
-            <a class="nav-link active" routerLink="/VisualizarDetalleProducto"
-              >Visualizar Reporte Detalle Producto</a
-            >
-            <a class="nav-link active" routerLink="/ObtenerDatosAPI"
-              >Traer Datos de la API</a
-            >
-            <a
-              class="nav-link active"
-              href="http://127.0.0.1:8000/admin/login/?next=/admin/"
-              >Django Admin</a
-            >
-          </div>
-        </div>
-      </div>
-    </nav>
+    <app-navbar />
 
     <!--cont-->
     <div class="container">

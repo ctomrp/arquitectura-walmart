@@ -31,10 +31,4 @@ export class Register {
       }
     );
   }
-
-  // submit(): void {
-  //   this.http
-  //     .post('http://127.0.0.1:8000/register', this.form.getRawValue())
-  //     .subscribe(() => this.router.navigate(['/login']));
-  // }
 }

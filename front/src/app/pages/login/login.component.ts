@@ -26,19 +26,11 @@ export class Login {
     this.authService.login(this.form.getRawValue()).subscribe(
       () => {
         this.authService.setAuthenticated(true);
-        this.router.navigate(['/reporte']);
+        this.router.navigate(['/home']);
       },
       (error) => {
-        // Handle login error
+        console.log(error);
       }
     );
   }
-
-  // submit(): void {
-  //   this.http
-  //     .post('http://127.0.0.1:8000/login', this.form.getRawValue(), {
-  //       withCredentials: true,
-  //     })
-  //     .subscribe(() => this.router.navigate(['/reporte']));
-  // }
 }

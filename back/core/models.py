@@ -1,5 +1,5 @@
 from django.db import models
-from django.contrib.auth.models import AbstractUser
+from django.contrib.auth.models import AbstractUser,Group
 
 #LAS SIGUIENTES CLASES SE ENCARGAN DE UN USUARIO CUSTOM + JWT
 class User(AbstractUser):
@@ -7,6 +7,7 @@ class User(AbstractUser):
     email = models.EmailField(max_length=255, unique=True)
     password = models.CharField(max_length=255)
     username = None
+    groups = models.ForeignKey(Group, on_delete=models.CASCADE,null=True)
 
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = []

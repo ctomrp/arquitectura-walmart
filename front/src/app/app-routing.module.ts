@@ -7,6 +7,7 @@ import { Login } from './pages/login/login.component';
 import { Register } from './pages/register/register.component';
 import { Home } from './pages/home/home.component';
 import { AuthGuard } from './auth.guard';
+import { hasRoleGuard } from './has-role.guard';
 
 const routes: Routes = [
   {
@@ -15,10 +16,10 @@ const routes: Routes = [
     canActivate: [AuthGuard],
   },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'login', component: Login },
+  { path: 'login', component: Login},
   { path: 'register', component: Register },
-  { path: 'home', component: Home },
-  { path: 'reporte', component: Products, canActivate: [AuthGuard] },
+  { path: 'home', component: Home},
+  { path: 'reporte', component: Products, canActivate: [AuthGuard,hasRoleGuard],data:{group:'Supervisor'} },
   { path: 'data-api', component: Report, canActivate: [AuthGuard] },
 ];
 

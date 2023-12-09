@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HttpClientXsrfModule } from '@angular/common/http';
 import { Products } from './pages/products/products.component';
 import { ProductsDetail } from './pages/products-detail/products-detail.component';
 import { Report } from './pages/report/report.component';
@@ -27,6 +27,9 @@ import { Home } from './pages/home/home.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    HttpClientXsrfModule.withOptions({
+      cookieName:'csrftoken',
+    }),
     ReactiveFormsModule,
     FormsModule,
     ReactiveFormsModule,

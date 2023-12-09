@@ -17,7 +17,7 @@ export class BackendService {
   private createReportUrl: string = 'crear_reporte_desde_json/';
   private urlReporte: string = 'reporte_venta/';
   private urlReporteDetalle: string = 'reporte_detalle_producto/';
-  private urlProducto: string = 'Producto/';
+  private urlProducto: string = 'Producto/'; 
   private urlSucursal: string = 'Sucursal/';
   private urlCompra: string = 'Compra/';
   private urlGrupoProducto: string = 'GrupoProducto/';

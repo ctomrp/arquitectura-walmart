@@ -13,7 +13,7 @@ const routes: Routes = [
   {
     path: 'detalle-producto',
     component: ProductsDetail,
-    canActivate: [AuthGuard],
+    canActivate: [AuthGuard,hasRoleGuard],data:{group:'Supervisor'},
   },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'login', component: Login},

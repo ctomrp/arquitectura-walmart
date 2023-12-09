@@ -21,7 +21,7 @@ export class hasRoleGuard implements CanActivate{
     const isAuthorized = this.authService.user.group.includes(route.data['group']);
     if (!isAuthorized){
       console.log('nones')
-      window.alert('aaa')
+      window.alert('No tiene permisos para acceder')
     }
       
   return isAuthorized

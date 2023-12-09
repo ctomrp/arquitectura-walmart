@@ -20,7 +20,7 @@ const routes: Routes = [
   { path: 'register', component: Register },
   { path: 'home', component: Home},
   { path: 'reporte', component: Products, canActivate: [AuthGuard,hasRoleGuard],data:{group:'Supervisor'} },
-  { path: 'data-api', component: Report, canActivate: [AuthGuard] },
+  { path: 'data-api', component: Report, canActivate: [AuthGuard,hasRoleGuard],data:{group:'Analista'} },
 ];
 
 @NgModule({

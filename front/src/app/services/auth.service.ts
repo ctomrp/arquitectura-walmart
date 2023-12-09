@@ -61,7 +61,4 @@ export class AuthService {
   getUser(token: string): UserModel{
     return JSON.parse(atob(token.split('.')[1])) as UserModel;
   }
-  obtUser():any{
-    return this.user;
-  }
 }

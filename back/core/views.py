@@ -8,7 +8,6 @@ from rest_framework.exceptions import AuthenticationFailed
 from rest_framework.response import Response
 from .models import Compra, GrupoProducto, Producto, Sucursal, User
 from .serializers import CompraSerializer, GrupoProductoSerializer, ProductoSerializer, SucursalSerializer, UserSerializer
-from django.contrib.auth.models import Group
 
 #LAS SIGUIENTES CLASES SE ENCARGAN DE UN USUARIO CUSTOM + JWT
 class RegisterView(APIView):

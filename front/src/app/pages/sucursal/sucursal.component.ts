@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { BackendService } from 'src/app/services/backend.service'; 
-import { Sucursal } from 'src/app/interfaces/Sucursal';
+
 
 @Component({
   selector: 'app-sucursal',
@@ -9,7 +9,7 @@ import { Sucursal } from 'src/app/interfaces/Sucursal';
 })
 export class SucursalComponent {
   constructor(private backendService: BackendService){}
-  Sucursal: Sucursal|undefined;
+  Sucursal: any|undefined;
 
 
   getSucursal(){

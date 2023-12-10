@@ -26,4 +26,22 @@ export class RdSalesComponent {
       this.traerCompras();
     });
   }
+  // postCompra(){
+  //   const formData = this.form.getRawValue();
+  //   formData.fechaCompra = this.datePipe.transform(formData.fechaCompra, 'yyyy-MM-ddTHH:mm:ss');
+  //   this.backendService.postCompra(formData).subscribe(
+  //     ()=>{
+  //       this.traerCompras();
+  //     },
+  //     (error)=>{
+  //       console.log(error);
+  //     }
+  //   )
+  // }
+  // updateCompra(idCompra:number){
+  //   this.backendService.updateCompra(idCompra,this.form.getRawValue()).subscribe(()=>{
+  //     this.traerCompras()
+  //     this.form.reset()
+  //   })
+  // }
 }

@@ -6,8 +6,56 @@
             <h1 class="text-center">Compras</h1>
             <br>
             <p class="d-flex gap-1 justify-content-center">
+                <!-- <button type="button" class="btn btn-primary" (click)="postCompra()">Agregar Compra</button>  -->
                 <button type="button" class="btn btn-primary" (click)="traerCompras()">Ver Compras</button> 
             </p>
+            <!-- <div class="container w-25">
+                <form [formGroup]="form">
+                    <input 
+                    type="datetime-local"
+                    class="form-control"
+                    placeholder="Fecha Compra Ej. Año-Mes-Dia hora:min:seg"
+                    formControlName="fechaCompra"
+                    /> 
+                    <br>
+                    <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Producto"
+                    formControlName="producto"
+                    />
+                    <br>
+                    <input 
+                    type="text"
+                    class="form-control"
+                    placeholder="Precio"
+                    formControlName="precio"
+                    />
+                    <br>
+                    <input 
+                    type="text"
+                    class="form-control"
+                    placeholder="Grupo Producto"
+                    formControlName="grupoProducto"
+                    />
+                    <br>
+                    <input 
+                    type="text"
+                    class="form-control"
+                    placeholder="Cantidad Comprada"
+                    formControlName="cantidadComprada"
+                    />
+                    <br>
+                    <input 
+                    type="text"
+                    class="form-control"
+                    placeholder="Numero Sucursal"
+                    formControlName="sucursal"
+                    />
+                    <br>
+                </form>        
+            </div>  -->
+            <br><br><br>
             <br>
             <div class="table">
                 <table class="table">
@@ -31,6 +79,7 @@
                         <td>{{compra.grupo_producto}}</td>
                         <td>{{compra.cantidad_comprada}}</td>
                         <td>{{compra.sucursal}}</td>
+                        <!-- <td class="col"><a class="btn btn-primary shadow" (click)="updateCompra(compra.id)" role="button">Editar Compra</a></td> -->
                         <td class="col"><a class="btn btn-danger shadow" (click)="eliminarCompra(compra.id)" role="button">Eliminar Compra</a></td>
                     </tbody>
                 </table>

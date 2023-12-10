@@ -31,7 +31,7 @@ export class NavbarComponent implements OnInit {
     this.authService.logout().subscribe(() => {
       this.authenticated = false;
       this.authService.clearLocalStorage();
-      this.router.navigate(['/home']);
+      this.router.navigate(['/login']);
     });
   }
 }

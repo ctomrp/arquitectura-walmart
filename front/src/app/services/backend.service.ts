@@ -224,20 +224,19 @@ export class BackendService {
       .pipe(catchError(this.handleError));
   }
 
-
   // Actualizar Compra
-  updateCompra(id: number, Compra: any): Observable<Compra> {
+  updateCompra(id: number, Compra: any): Observable<any> {
     return this.http
-      .put<Compra>(`${this.baseUrl}${this.urlCompra}${id}/`, Compra, {
+      .put<any>(`${this.baseUrl}${this.urlCompra}${id}/`, Compra, {
         headers: this.getHeaders(),
       })
       .pipe(catchError(this.handleError));
   }
 
   // Crear Compra
-  postCompra(): Observable<Compra> {
+  postCompra(compra:any): Observable<any> {
     return this.http
-      .post<Compra>(`${this.baseUrl}${this.urlCompra}`, Observable, {
+      .post<any>(`${this.baseUrl}${this.urlCompra}`, compra, {
         headers: this.getHeaders(),
       })
       .pipe(catchError(this.handleError));

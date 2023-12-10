@@ -18,15 +18,15 @@ const routes: Routes = [
   
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'login', component: Login},
-  { path: 'register', component: Register },
+  { path: 'register', component: Register},
   { path: 'home', component: Home},
   { path: 'reporte', component: Products, canActivate: [AuthGuard,hasRoleGuard],data:{group:'Supervisor'} },
   { path: 'data-api', component: Report, canActivate: [AuthGuard,hasRoleGuard],data:{group:'Analista'} },
   { path: 'detalle-producto',component: ProductsDetail,canActivate: [AuthGuard,hasRoleGuard],data:{group:'Supervisor'} },
-  { path: 'sucursal',component: SucursalComponent},
-  { path: 'grupo-producto',component: GrupoProductoComponent},
-  { path: 'compra', component: RdSalesComponent},
-  { path: 'producto', component: CrudProductsComponent}
+  { path: 'sucursal',component: SucursalComponent,canActivate: [AuthGuard,hasRoleGuard],data:{group:'Analista'}},
+  { path: 'grupo-producto',component: GrupoProductoComponent, canActivate:[AuthGuard,hasRoleGuard],data:{group:'Supervisor'}},
+  { path: 'compra', component: RdSalesComponent,canActivate: [AuthGuard,hasRoleGuard],data:{group:'Analista'}},
+  { path: 'producto', component: CrudProductsComponent,canActivate: [AuthGuard,hasRoleGuard],data:{group:'Supervisor'}}
 ];
 
 @NgModule({

@@ -1,16 +1,18 @@
 <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
   <div class="container-fluid">
-    <div class="col-4 d-flex">
+    <div class="col-1 d-flex">
       <a routerLink="/home" class="navbar-brand">Home</a>
     </div>
-    <div class="col-4 d-flex">
+    <div class="col-5 d-flex">
       <a routerLink="/reporte" class="navbar-brand">Reporte de venta</a>
-      <a routerLink="/detalle-producto" class="navbar-brand"
-        >Reporte detalle de productos</a
-      >
+      <a routerLink="/detalle-producto" class="navbar-brand">Reporte detalle de productos</a>
       <a routerLink="/data-api" class="navbar-brand">Consultar Walmart</a>
+      <a routerLink="/sucursal" class="navbar-brand">Sucursal</a>
+      <a routerLink="/grupo-producto" class="navbar-brand">Grupo</a>
+      <a routerLink="/compra" class="navbar-brand">Compra</a>
+      <a routerLink="/producto" class="navbar-brand">Producto</a>
     </div>
-    <div class="col-4 d-flex justify-content-end">
+    <div class="col-2 d-flex justify-content-end">
       <a routerLink="/login" class="navbar-brand">Ingresar</a>
       <a routerLink="/register" class="navbar-brand">Registrar</a>
       <a routerLink="/home" class="navbar-brand" (click)="logout()">Logout</a>

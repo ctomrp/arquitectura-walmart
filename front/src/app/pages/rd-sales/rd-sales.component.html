@@ -1,0 +1,40 @@
+<app-navbar />
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="text-center">Compras</h1>
+            <br>
+            <p class="d-flex gap-1 justify-content-center">
+                <button type="button" class="btn btn-primary" (click)="traerCompras()">Ver Compras</button> 
+            </p>
+            <br>
+            <div class="table">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Fecha Hora Compra</th>
+                            <th scope="col">Producto</th>
+                            <th scope="col">Precio</th>
+                            <th scope="col">Grupo Producto</th>
+                            <th scope="col">Cantidad Comprada</th>
+                            <th scope="col">Sucursal</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                     <tr *ngFor="let compra of compras">
+                        <th scope="row">{{compra.id}}</th>
+                        <td>{{compra.fecha_hora_compra}}</td>
+                        <td>{{compra.producto}}</td>
+                        <td>{{compra.precio}}</td>
+                        <td>{{compra.grupo_producto}}</td>
+                        <td>{{compra.cantidad_comprada}}</td>
+                        <td>{{compra.sucursal}}</td>
+                        <td class="col"><a class="btn btn-danger shadow" (click)="eliminarCompra(compra.id)" role="button">Eliminar Compra</a></td>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

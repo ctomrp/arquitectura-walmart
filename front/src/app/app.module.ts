@@ -14,6 +14,10 @@ import { Register } from './pages/register/register.component';
 import { Home } from './pages/home/home.component';
 import { SucursalComponent } from './pages/sucursal/sucursal.component';
 import { GrupoProductoComponent } from './pages/grupo-producto/grupo-producto.component';
+import { RdSalesComponent } from './pages/rd-sales/rd-sales.component';
+import { CrudProductsComponent } from './pages/crud-products/crud-products.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,6 +30,8 @@ import { GrupoProductoComponent } from './pages/grupo-producto/grupo-producto.co
     NavbarComponent,
     SucursalComponent,
     GrupoProductoComponent,
+    RdSalesComponent,
+    CrudProductsComponent
   ],
   imports: [
     BrowserModule,

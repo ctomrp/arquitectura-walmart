@@ -118,9 +118,9 @@ export class BackendService {
   }
 
   // Crear Producto
-  postProducto(): Observable<Producto> {
+  postProducto(producto: any): Observable<Producto> {
     return this.http
-      .post<Producto>(`${this.baseUrl}${this.urlProducto}`, Observable, {
+      .post<Producto>(`${this.baseUrl}${this.urlProducto}`, producto, {
         headers: this.getHeaders(),
       })
       .pipe(catchError(this.handleError));
@@ -224,6 +224,16 @@ export class BackendService {
       .pipe(catchError(this.handleError));
   }
 
+
+  // Actualizar Compra
+  updateCompra(id: number, Compra: any): Observable<Compra> {
+    return this.http
+      .put<Compra>(`${this.baseUrl}${this.urlCompra}${id}/`, Compra, {
+        headers: this.getHeaders(),
+      })
+      .pipe(catchError(this.handleError));
+  }
+
   // Crear Compra
   postCompra(): Observable<Compra> {
     return this.http
@@ -237,15 +247,6 @@ export class BackendService {
   getCompra(): Observable<Compra> {
     return this.http
       .get<Compra>(`${this.baseUrl}${this.urlCompra}`)
-      .pipe(catchError(this.handleError));
-  }
-
-  // Actualizar Compra
-  updateCompra(id: number, Compra: any): Observable<Compra> {
-    return this.http
-      .put<Compra>(`${this.baseUrl}${this.urlCompra}${id}/`, Compra, {
-        headers: this.getHeaders(),
-      })
       .pipe(catchError(this.handleError));
   }
 

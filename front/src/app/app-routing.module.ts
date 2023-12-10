@@ -10,6 +10,9 @@ import { AuthGuard } from './auth.guard';
 import { hasRoleGuard } from './has-role.guard';
 import { SucursalComponent } from './pages/sucursal/sucursal.component';
 import { GrupoProductoComponent } from './pages/grupo-producto/grupo-producto.component';
+import { RdSalesComponent } from './pages/rd-sales/rd-sales.component';
+import { CrudProductsComponent } from './pages/crud-products/crud-products.component';
+
 
 const routes: Routes = [
   
@@ -21,7 +24,9 @@ const routes: Routes = [
   { path: 'data-api', component: Report, canActivate: [AuthGuard,hasRoleGuard],data:{group:'Analista'} },
   { path: 'detalle-producto',component: ProductsDetail,canActivate: [AuthGuard,hasRoleGuard],data:{group:'Supervisor'} },
   { path: 'sucursal',component: SucursalComponent},
-  { path: 'grupo-producto',component: GrupoProductoComponent}
+  { path: 'grupo-producto',component: GrupoProductoComponent},
+  { path: 'compra', component: RdSalesComponent},
+  { path: 'producto', component: CrudProductsComponent}
 ];
 
 @NgModule({

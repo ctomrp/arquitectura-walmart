@@ -13,6 +13,8 @@ import { Login } from './pages/login/login.component';
 import { Register } from './pages/register/register.component';
 import { Home } from './pages/home/home.component';
 import { SucursalComponent } from './pages/sucursal/sucursal.component';
+import { CrudProductsComponent } from './pages/crud-products/crud-products.component';
+import { RdSalesComponent } from './pages/rd-sales/rd-sales.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,6 +26,8 @@ import { SucursalComponent } from './pages/sucursal/sucursal.component';
     Report,
     NavbarComponent,
     SucursalComponent,
+    CrudProductsComponent,
+    RdSalesComponent,
   ],
   imports: [
     BrowserModule,

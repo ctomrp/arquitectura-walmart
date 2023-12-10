@@ -1,0 +1,70 @@
+<app-navbar />
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="text-center">Productos</h1>
+            <br>
+            <p class="d-flex gap-1 justify-content-center">
+                <button type="button" class="btn btn-primary" (click)="crearProducto()">Crear Producto</button> 
+                <button type="button" class="btn btn-primary" (click)="traerProductos()">Ver Productos</button>
+            </p>
+            <div class="container w-25">
+                <form [formGroup]="form">
+                    <br>
+                    <input 
+                    type="text"
+                    class="form-control"
+                    placeholder="Nombre Producto"
+                    formControlName="nombre"
+                    />
+                    <br>
+                    <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Precio"
+                    formControlName="precio"
+                    />
+                    <br>
+                    <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Descripción"
+                    formControlName="descripcion"
+                    />
+                    <br>
+                    <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Grupo (A, B, C, D)"
+                    formControlName="grupo"
+                    />
+                </form>
+            </div>
+            <br>
+            <div class="table">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Nombre Producto</th>
+                            <th scope="col">Precio</th>
+                            <th scope="col">Descripción</th>
+                            <th scope="col">Grupo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let producto of productos">
+                        <th scope="row">{{producto.id}}</th>
+                        <td>{{producto.nombre}}</td>
+                        <td>{{producto.precio}}</td>
+                        <td>{{producto.descripcion}}</td>
+                        <td>{{producto.grupo}}</td>
+                        <td class="col"><a class="btn btn-danger shadow" (click)="eliminarProducto(producto.id)" role="button">Eliminar Producto</a></td>
+                        <td class="col"><a class="btn btn-success shadow" (click)="editarProducto(producto.id)" role="button">Editar Producto</a></td>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

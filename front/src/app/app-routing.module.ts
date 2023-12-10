@@ -9,6 +9,8 @@ import { Home } from './pages/home/home.component';
 import { AuthGuard } from './auth.guard';
 import { hasRoleGuard } from './has-role.guard';
 import { SucursalComponent } from './pages/sucursal/sucursal.component';
+import { RdSalesComponent } from './pages/rd-sales/rd-sales.component';
+import { CrudProductsComponent } from './pages/crud-products/crud-products.component';
 
 const routes: Routes = [
   
@@ -19,7 +21,9 @@ const routes: Routes = [
   { path: 'reporte', component: Products, canActivate: [AuthGuard,hasRoleGuard],data:{group:'Supervisor'} },
   { path: 'data-api', component: Report, canActivate: [AuthGuard,hasRoleGuard],data:{group:'Analista'} },
   { path: 'detalle-producto',component: ProductsDetail,canActivate: [AuthGuard,hasRoleGuard],data:{group:'Supervisor'} },
-  { path: 'sucursal',component: SucursalComponent}
+  { path: 'sucursal',component: SucursalComponent},
+  { path: 'compra', component: RdSalesComponent},
+  { path: 'producto', component: CrudProductsComponent}
 ];
 
 @NgModule({

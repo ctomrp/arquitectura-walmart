@@ -30,7 +30,7 @@ class LoginView(APIView):
 
         if not user.check_password(password):
             raise AuthenticationFailed('Incorrect password!')
-
+        
         userSuper = User.objects.get(groups_id=1)
         userAnal = User.objects.get(groups_id=2)
         

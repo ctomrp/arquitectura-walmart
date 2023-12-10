@@ -20,12 +20,10 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <td>
-                            <tr *ngFor="let Sucursal for Sucursal">
-                            <th scope="row">{{Sucursal.id}}</th>
-                            <th scope="row">{{Sucursal.nombre}}</th>
-                            <th scope="row">{{Sucursal.ubicacion}}</th>
-                        </td>
+                     <tr *ngFor="let sucursal of Sucursal">
+                        <th scope="row">{{sucursal.id}}</th>
+                        <td>{{sucursal.nombre}}</td>
+                        <td>{{sucursal.ubicacion}}</td>
                     </tbody>
                 </table>
             </div>

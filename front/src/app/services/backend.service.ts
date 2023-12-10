@@ -152,9 +152,9 @@ export class BackendService {
   }
 
   // Crear Sucursal
-  postSucursal(): Observable<Sucursal> {
+  postSucursal(sucursal:any): Observable<any> {
     return this.http
-      .post<Sucursal>(`${this.baseUrl}${this.urlSucursal}`, Observable, {
+      .post<any>(`${this.baseUrl}${this.urlSucursal}`, sucursal, {
         headers: this.getHeaders(),
       })
       .pipe(catchError(this.handleError));
@@ -186,12 +186,10 @@ export class BackendService {
   }
 
   // Crear Grupo Producto
-  postGrupoProducto(): Observable<GrupoProducto> {
+  postGrupoProducto(grupoProducto:any): Observable<GrupoProducto> {
     return this.http
-      .post<GrupoProducto>(
-        `${this.baseUrl}${this.urlGrupoProducto}`,
-        Observable,
-        { headers: this.getHeaders() }
+      .post<GrupoProducto>(`${this.baseUrl}${this.urlGrupoProducto}`,grupoProducto,
+        { headers: this.getHeaders(), }
       )
       .pipe(catchError(this.handleError));
   }

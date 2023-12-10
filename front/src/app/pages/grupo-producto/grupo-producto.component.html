@@ -1,0 +1,44 @@
+<app-navbar />
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="text-center">Grupo Producto</h1>
+            <br>
+            <p class="d-flex gap-1 justify-content-center">
+                <button class="btn btn-primary" (click)="submit()">Agregar Grupo Producto</button> 
+                <button type="button" class="btn btn-primary" (click)="getGrupoProducto()">Ver Grupo Producto</button>
+            </p>
+            <br>
+            <div class="container w-25">
+                <form [formGroup]="form">
+                    <input 
+                    type="text"
+                    class="form-control"
+                    placeholder="Nombre Grupo Producto"
+                    formControlName="nombre"
+                    />
+                    <br>
+                </form>        
+            </div>
+            <br><br><br>
+            <div class="table">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">id</th>
+                            <th scope="col">Grupo Producto</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                     <tr *ngFor="let gProducto of grupoProducto">
+                        <th scope="row">{{gProducto.id}}</th>
+                        <td>{{gProducto.nombre}}</td>
+                        <td class="col"><a class="btn btn-primary shadow" (click)="updateGrupoProducto(gProducto.id)" role="button">Editar</a>
+                        <td class="col"><a class="btn btn-danger shadow" (click)="deleteGrupoProducto(gProducto.id)" role="button">Eliminar</a>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

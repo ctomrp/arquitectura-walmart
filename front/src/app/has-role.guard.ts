@@ -18,12 +18,35 @@ export class hasRoleGuard implements CanActivate{
     | UrlTree> 
     | boolean 
     | UrlTree {   
-    const isAuthorized = this.authService.user.group.includes(route.data['group']);
-    if (!isAuthorized){
-      console.log('nones')
-      window.alert('No tiene permisos para acceder')
+      const user = this.authService.user;
+    
+      if (user) {
+        const userRoles = user.group; // Assuming user.group is an array of roles the user has
+        
+        // Check if the user has the required role for the route
+        if (route.data['group']) {
+          const requiredRole = route.data['group'];
+  
+          if (userRoles.includes(requiredRole)) {
+            // User has the required role, grant access
+            return true;
+          } else {
+            // User does not have the required role, deny access
+            // You can also redirect to a different route or show an error message
+            console.log(`User does not have the required role: ${requiredRole}`);
+            
+            return false;
+          }
+        } else {
+          // Route does not have a required role, grant access by default
+          return true;
+        }
+      } else {
+        // User is not authenticated, you can redirect to the login page or handle it as needed
+        console.log('User not authenticated');
+        return false;
+      }
     }
-      
-  return isAuthorized
-  }
+
+  
 }

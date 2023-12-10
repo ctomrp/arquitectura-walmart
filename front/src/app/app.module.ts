@@ -12,6 +12,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { Login } from './pages/login/login.component';
 import { Register } from './pages/register/register.component';
 import { Home } from './pages/home/home.component';
+import { SucursalComponent } from './pages/sucursal/sucursal.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,6 +23,7 @@ import { Home } from './pages/home/home.component';
     Register,
     Report,
     NavbarComponent,
+    SucursalComponent,
   ],
   imports: [
     BrowserModule,

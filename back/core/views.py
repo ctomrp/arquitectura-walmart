@@ -31,14 +31,17 @@ class LoginView(APIView):
         if not user.check_password(password):
             raise AuthenticationFailed('Incorrect password!')
 
-        if user:
-            if User.objects.filter(groups_id=1):
-                group_name = 'Supervisor'
-            elif User.objects.filter(groups_id=2):
-                group_name = 'Analista' 
-            else: 
-                group_name = None
+        userSuper = User.objects.get(groups_id=1)
+        userAnal = User.objects.get(groups_id=2)
+        
 
+        if user == userSuper:
+            group_name = 'Supervisor'
+        elif user == userAnal:
+            group_name = 'Analista'
+        else:
+            group_name = None
+   
 
         payload = {
             'id': user.id,

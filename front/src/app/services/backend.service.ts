@@ -295,11 +295,4 @@ export class BackendService {
       })
       .pipe(catchError(this.handleError));
   }
-  // login(email:string,password:string): Observable<User>{
-  //   const body = { email, password };
-  //   return this.http.post<User>(`${this.baseUrl}${this.urlUserLogin}`,body,{
-  //     headers: this.getHeaders(),
-  //   })
-  //   .pipe(catchError(this.handleError));
-  // }
 }

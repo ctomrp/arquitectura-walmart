@@ -9,7 +9,6 @@ from rest_framework.response import Response
 from .models import Compra, GrupoProducto, Producto, Sucursal, User
 from .serializers import CompraSerializer, GrupoProductoSerializer, ProductoSerializer, SucursalSerializer, UserSerializer
 
-
 #LAS SIGUIENTES CLASES SE ENCARGAN DE UN USUARIO CUSTOM + JWT
 class RegisterView(APIView):
     def post(self, request):
@@ -32,12 +31,25 @@ class LoginView(APIView):
         if not user.check_password(password):
             raise AuthenticationFailed('Incorrect password!')
 
+        userSuper = User.objects.get(groups_id=1)
+        userAnal = User.objects.get(groups_id=2)
+        
+
+        if user == userSuper:
+            group_name = 'Supervisor'
+        elif user == userAnal:
+            group_name = 'Analista'
+        else:
+            group_name = None
+   
+
         payload = {
             'id': user.id,
             'exp': dt.datetime.utcnow() + dt.timedelta(minutes=60),
-            'iat': dt.datetime.utcnow()
+            'iat': dt.datetime.utcnow(),
+            'group': group_name
         }
-
+        print(payload)
         token = jwt.encode(payload, 'secret', algorithm='HS256')
 
         response = Response()
@@ -46,7 +58,7 @@ class LoginView(APIView):
         response.data = {
             'jwt': token
         }
-
+        print(response)
         return response
     
 
